@@ -25,16 +25,14 @@ public class Frog_jump {
         if(idx == 0) return 0;
         if(dp[idx] != -1) return dp[idx];
 
-        int left = solve(idx - 1,heights,dp) + Math.abs(heights[idx-1] - heights[idx]);
-        int right = Integer.MAX_VALUE;
+        int skip = solve(idx - 1,heights,dp) + Math.abs(heights[idx-1] - heights[idx]);
+        int take = Integer.MAX_VALUE;
         if(idx > 1){
-            right = solve(idx - 2, heights,dp) + Math.abs(heights[idx-2] - heights[idx]);
+            take = solve(idx - 2, heights,dp) + Math.abs(heights[idx-2] - heights[idx]);
         }
-        return dp[idx] = Math.min(left,right);
+        return dp[idx] = Math.min(skip,take);
     }
     public static int frogJump(int n, int heights[]) {
-
-        // Write your code here..
         int dp[] = new int[n+1];
         Arrays.fill(dp,-1);
         return solve(n-1,heights,dp);

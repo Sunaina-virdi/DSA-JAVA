@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class NonAdajSum {
 // MEMOIZATION
-// TC - O(N)
+// TC - O(N) 
 // SC - O(N) + O(N)
     public static int solve(int idx,ArrayList<Integer>nums,int dp[]){
 		if(idx == 0) return nums.get(idx);
