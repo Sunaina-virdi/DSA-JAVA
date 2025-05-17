@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.DP_Subsequence;
 
 public class SubsetSum {
     // Recursion 

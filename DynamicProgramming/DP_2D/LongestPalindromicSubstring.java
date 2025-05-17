@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.DP_2D;
 // leetcode 5
 public class LongestPalindromicSubstring {
     // TC - O(N3)

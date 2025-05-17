@@ -1,4 +1,5 @@
-package DynamicProgramming;
+package DynamicProgramming.DP_1D;
+
 import java.util.* ;
 public class Frog_jump {
 // Recursion solution - TLE

@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.DP_Subsequence;
 
 import java.util.Arrays;
 // leetcode 322

@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.DP_1D;
 // leetcpde - 198
 import java.util.ArrayList;
 import java.util.Arrays;

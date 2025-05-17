@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.DP_1D;
 // leetcode 213
 import java.util.ArrayList;
 

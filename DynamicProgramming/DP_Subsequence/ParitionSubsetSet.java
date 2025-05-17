@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.DP_Subsequence;
 
 public class ParitionSubsetSet {
     public static boolean solve(int idx,int target,int[] arr,Boolean[][] dp,int n){
