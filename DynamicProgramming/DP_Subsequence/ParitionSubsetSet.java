@@ -1,5 +1,5 @@
 package DynamicProgramming.DP_Subsequence;
-
+// https://www.geeksforgeeks.org/problems/subset-sum-problem2014/1
 public class ParitionSubsetSet {
     public static boolean solve(int idx,int target,int[] arr,Boolean[][] dp,int n){
 		if(idx == n) return false;

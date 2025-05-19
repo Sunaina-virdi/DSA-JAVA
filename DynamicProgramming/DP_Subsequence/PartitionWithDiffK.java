@@ -1,5 +1,6 @@
 package DynamicProgramming.DP_Subsequence;
-
+// https://www.geeksforgeeks.org/problems/partitions-with-given-difference/1
+// https://www.naukri.com/code360/problems/partitions-with-given-difference_3751628?leftPanelTabValue=PROBLEM
 import java.util.Arrays;
 
 public class PartitionWithDiffK {

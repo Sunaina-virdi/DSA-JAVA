@@ -2,6 +2,7 @@ package DynamicProgramming.DP_Subsequence;
 
 import java.util.Arrays;
 
+// https://www.naukri.com/code360/problems/count-subsets-with-sum-k_3952532?leftPanelTabValue=PROBLEM
 public class CountSubsetSumk {
     // recursion 
     // TC - (2^n)
@@ -36,6 +37,24 @@ public class CountSubsetSumk {
         }
         return dp[idx][tar] = (include + exclude) % 1000000007;
     }
+    public static int tab(int num[],int tar){
+        int n = num.length;
+        int [][]dp = new int[n][tar+1];
+        dp[0][0] = 1;
+        if(num[0] <= tar) dp[0][num[0]] += 1;
+
+        for(int i=1;i<n;i++){
+            for(int sum = 0;sum <= tar;sum++){
+                int skip = dp[i-1][sum];
+                int take = 0;
+                if(num[i] <= sum){
+                    take = dp[i-1][sum - num[i]];
+                }
+                dp[i][sum] = skip + take;
+            }
+        }
+        return dp[n-1][tar];
+    }
     public static int findWays(int num[], int tar) {
         int dp[][] = new int[num.length][tar+1];
         for(int i[]: dp){
@@ -47,6 +66,7 @@ public class CountSubsetSumk {
     public static void main(String[] args) {
         int num[] = {1,1,4,5};
         int tar = 5;
-        System.out.println(findWays(num, tar));
+        // System.out.println(findWays(num, tar));
+        System.out.println(tab(num, tar));
     }
 }
